@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+body{
+    display: grid;
+    height: 100vh;
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    grid-template: 
+                   'aside header footer' 20%
+                   'aside main footer' 1fr
+                   /15% 1fr 5% ;
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+}
+
+h1{
+    font-size: 32px;
+    font-weight:lighter;
+    padding-top: 20px;
+    color: gray;
+    font-weight: bold;  
+    display: inline-block;
+    border-bottom: 1px solid gray;
+}
+
+aside{
+    grid-area: aside;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 15%;
+    margin-top: 20px;
+    position: fixed;
+    border-right:  gray solid 1px;
+}
+
+.side a{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: gray;
+    transition: .5s;
+    font-size: 80%;
+}
+
+.side a:hover{
+    font-size: 90%;
+    color: #ff7f50;
+    font-weight: bolder;
+}
+
+main{
+    grid-area: main;
+    color: gray;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.content:nth-of-type(2n) {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.con2{
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.con2 p{
+    margin-top: 10px;
+}
+
+.con2 a{
+    margin-top: 10px;
+}
+
+img{
+    height: 250px;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.content a{
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: gray;
+    border: solid 1px gray;
+    transition: .5s;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.content a:hover{
+    background: gray;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+h2{
+    font-size: 25px;
+    border-bottom: gray 1px solid;
+    display: inline-block;
+}
+
+footer{
+    grid-area: footer;
+    border-left: 1px solid gray;
+}
+.faith{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.intro{
+    margin-top: 50px;
+}
+
+.intro a{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.intro li{
+    font-size: 24px;
+    margin-top: 10px;
+    border-bottom:solid  1px gray;
+    margin-left: 20px;
+}
+
+
+.introduce{
+    display: flex;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+    .side{
+        display: none;
+    }
+
+    main{
+        margin: 0 auto;
+    }
+
+    .content{
+        height: 400px;
+    }
+
+    
+    footer{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .content:nth-of-type(2n){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto ;
+    }
+
+    body{
+        width: 100vh;
+    }
+
+    img{
+        width: 250px;
+        height: 120px;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    aside{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+}
+
